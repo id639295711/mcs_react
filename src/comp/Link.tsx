@@ -1,11 +1,17 @@
-import * as React from 'react';
+import React, {FC} from 'react'
 
-type Props = {
+interface LinkProps {
     text: string,
     url: string
-};
-export const Link = (props: Props) => {
+}
+
+const Link: FC<LinkProps> = ({
+                                 url,
+                                 text
+                             }) => {
     return (
-        <a className="ui-link" href={props.url}>{props.text}</a>
+        <a className="ui-link" href={url}>{text}</a>
     );
-};
+}
+
+export default Link

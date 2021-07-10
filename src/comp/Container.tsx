@@ -1,13 +1,15 @@
-import * as React from 'react';
+import React, {FC} from 'react'
 
-type Props = {
-    children: React.ReactNode
-};
+interface ContainerProps {
+    children?: React.ReactNode
+}
 
-export const Container = (props: Props) => {
+const Container: FC<ContainerProps> = ({children}) => {
     return (
         <div className="ui-container">
-            {props.children}
+            {children}
         </div>
     );
-};
+}
+
+export default Container

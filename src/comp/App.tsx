@@ -1,8 +1,8 @@
 import React from 'react';
 import {Button} from "./Button";
-import {Container} from "./Container";
-import {Input} from "./Input";
-import {Link} from "./Link";
+import Container from "./Container";
+import Input from "./Input";
+import Link from "./Link";
 
 import './../css/App.css'
 

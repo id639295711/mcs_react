@@ -1,19 +1,24 @@
-import * as React from 'react';
+import React, {FC} from 'react'
 
-type Props = {
+interface InputProps {
     text?: string,
     placeholder: string,
     name: string
-};
+}
 
-export const Input = (props: Props) => {
+const Input: FC<InputProps> = ({
+                                   text,
+                                   placeholder,
+                                   name
+                               }) => {
     return (
         <input className="ui-textfield"
-               type={props.text ? props.text : "text"}
-               placeholder={props.placeholder}
-               name={props.name}
+               type={text ? text : "text"}
+               placeholder={placeholder}
+               name={name}
         >
-
         </input>
-    );
-};
+    )
+}
+
+export default Input

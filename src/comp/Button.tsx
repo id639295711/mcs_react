@@ -1,33 +1,20 @@
 import * as React from 'react';
 
-type Props = {
+interface ButtonProps {
     text: string,
-    // type: string,
     type: "button" | "submit" | "reset" | undefined,
-    disabled: boolean
-};
+    disabled: boolean,
+    onClick?: () => void
+}
 
-// export const Button = ({text, type, disabled, ...other}: Props) => {
-export const Button = ({text, type, disabled, ...other}: Props & any) => {
+export const Button = ({text, type, disabled, onClick}: ButtonProps) => {
     return (
         <button className="ui-button"
                 type={type}
                 disabled={disabled}
-                {...other}
+                onClick={onClick}
         >
             {text}
         </button>
     );
 };
-
-/*export const Button = (props: Props) => {
-    return (
-        <button className=".ui-button"
-                type={props.type}
-                disabled={props.disabled}
-        >
-            {props.text}
-        </button>
-    );
-};*/
-
