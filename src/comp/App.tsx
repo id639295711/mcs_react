@@ -18,7 +18,7 @@ function App() {
 
             <Container>
                 <Button text="inside container" type="reset" disabled={false}/>
-                <Input placeholder="placeholder" text="inside container" name="name of input"/>
+                <Input className="one-more-className" placeholder="placeholder" text="inside container" name="name of input"/>
             </Container>
 
             <Container>
