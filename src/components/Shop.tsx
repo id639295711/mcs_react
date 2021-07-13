@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react'
+import React, {useState} from 'react'
 import AddItem from "./AddItem";
 import ItemsList from "./ItemsList";
 import IITem from "../types/IITem";

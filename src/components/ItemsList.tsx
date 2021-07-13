@@ -12,7 +12,7 @@ const ItemsList: FC<ItemsListProps> = ({items, onDelete}) => {
         <ul>
             {
                 items.map(item =>
-                    <li>
+                    <li key={item.id}>
                         <Item item={item}/>
                         <button onClick={() => onDelete(item)}>Удалить</button>
                     </li>

@@ -1,4 +1,5 @@
 import React, {FC, useState} from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import IITem from "../types/IITem";
 
 interface AddItemProps {
@@ -25,10 +26,16 @@ const AddItem: FC<AddItemProps> = ({onSubmit, onCancel}) => {
         setDesc(e.target.value)
     }
 
-    const handleSubmitClick = () => {
+    const handleSubmitClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+
         const error = validate()
 
-        if(!error) onSubmit({name: name, desc: desc})
+        if(!error) onSubmit({
+            id: uuidv4(),
+            name: name,
+            desc: desc
+        })
 
         setErr(error)
     }
